@@ -16,9 +16,9 @@ Last reviewed: 0.1.0 / 2026-09-17
 | Channel | Artifact | Status | Decision / reason | Date |
 |---|---|---|---|---|
 | GitHub repo | jgsystemsconsulting/awesome-stpa | live | Canonical home of the list. Visibility flips private to public under family Checklist A in this release. | 2026-09-17 |
-| GitHub Releases | v0.1.0 | pending | Published from the CHANGELOG entry with the licence-enquiry footer once the release commit merges. Flipped to submitted in this release's platform steps. | 2026-09-17 |
-| GitHub Pages landing | docs/index.html | pending | Served from main /docs; the repo homepage URL points here. Flipped to live after Pages enablement. | 2026-09-17 |
-| GitHub About, topics, homepage | repo settings | pending | Description set to the locked string; homepage set once the Pages URL serves. The six existing topics stay unchanged. Flipped to applied. | 2026-09-17 |
+| GitHub Releases | v0.1.0 | submitted | Published from the CHANGELOG entry with the licence-enquiry footer on the release commit. | 2026-09-17 |
+| GitHub Pages landing | docs/index.html | live | Served from main /docs; build status built. Homepage URL set after Checklist A proves anonymous 200 (or earlier if Pages already serves). | 2026-09-17 |
+| GitHub About, topics, homepage | repo settings | applied | Description set to the locked string; six topics unchanged. Homepage follows the Checklist A flip once anonymous Pages 200 is proven. | 2026-09-17 |
 | Org catalogue (labs.jgsystemsconsulting.com) | site entry | planned | Add a list entry alongside the other awesome-mbse spokes. | 2026-09-17 |
 | sindresorhus/awesome | list PR | deferred | Checklist C runs after the hub goes public; not before. | 2026-09-17 |
 | In-host agent and IDE marketplaces (Claude Code, Cursor, Codex, Gemini CLI) | n/a | deliberate N/A | A curated list is browsed on GitHub, not installed into an agent host, so no marketplace manifests apply (RR-B-29). | 2026-09-17 |
