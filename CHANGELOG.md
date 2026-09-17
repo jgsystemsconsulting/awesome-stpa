@@ -20,3 +20,4 @@ Keep a Changelog and versions follow Semantic Versioning.
 - Release-standard pass (Release Repo Standard v1.14, RR-B Base): COPYRIGHT,
   CITATION.cff, RELEASE-INFO.txt, SECURITY.md advisory route, release gate CI,
   issue forms, Pages landing, and the distribution ledger.
+- Repository made public on 2026-09-17 (family Checklist A); decision issue 2.
