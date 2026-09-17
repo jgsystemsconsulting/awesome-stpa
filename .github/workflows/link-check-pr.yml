@@ -1,0 +1,44 @@
+name: link-check (PR)
+
+# Gate on contributions: a dead new link or bad anchor fails the PR, and pushes
+# to main are gated too. Ported from the awesome-mbse hub workflow, hardened:
+# every action ref is pinned to a full commit SHA, and --max-retries added for
+# MIT host flakiness (spec risks).
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - ".lycheeignore"
+      - ".github/workflows/link-check-pr.yml"
+  push:
+    branches: [main]
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check links and in-doc anchors
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # master w/ nested-tarball install fix (>v2.8.0)
+        with:
+          # --include-fragments=anchor-only validates the hand-maintained ToC
+          # against the section headings. The token lets github.com links be
+          # checked authenticated instead of against the anonymous rate limit.
+          lycheeVersion: v0.24.2
+          args: >-
+            --include-fragments=anchor-only
+            --max-retries 3
+            --max-concurrency 4
+            --accept 200..=299,429
+            --no-progress
+            README.md
+          fail: true
+          token: ${{ secrets.GITHUB_TOKEN }}
