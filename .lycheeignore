@@ -1,0 +1,9 @@
+# Ignore policy: add a line only after CI reports a URL failed but the URL is
+# verifiably live in a browser. Every entry is a hole in the freshness guarantee.
+# Format: one regex per line, with a dated comment above it naming the browser
+# verification used and the removal condition. Re-verify every entry at each
+# quarterly sweep.
+#
+# Standing candidates (research 2026-09-17), NOT ignored yet: MIT Press book
+# pages and iso.org / sae.org catalog pages can 403 automated fetchers. If CI
+# reports one, browser-verify it, then add the exact URL with a dated comment.
