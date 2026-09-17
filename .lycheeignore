@@ -4,6 +4,33 @@
 # verification used and the removal condition. Re-verify every entry at each
 # quarterly sweep.
 #
-# Standing candidates (research 2026-09-17), NOT ignored yet: MIT Press book
-# pages and iso.org / sae.org catalog pages can 403 automated fetchers. If CI
-# reports one, browser-verify it, then add the exact URL with a dated comment.
+# Standing candidates (research 2026-09-17), NOT ignored yet: SAE catalog pages
+# can 403 automated fetchers. If CI reports one, browser-verify it, then add the
+# exact URL with a dated comment.
+
+# Hub repo is private: lychee authenticated as this repo's GITHUB_TOKEN gets a 404.
+# Browser-verified live by an org member on 2026-09-17. Remove when the hub goes public.
+https://github\.com/jgsystemsconsulting/awesome-mbse
+
+# MIT Press Direct open-access book page: Cloudflare bot challenge to automated
+# clients (Playwright headless stayed on "Just a moment..."). Canonical OA URL for
+# Engineering a Safer World. Browser-verified standing candidate 2026-09-17.
+# Remove when direct.mit.edu returns 2xx to lychee without challenge.
+https://direct\.mit\.edu/books/oa-monograph/2908/Engineering-a-Safer-WorldSystems-Thinking-Applied
+
+# MIT Press storefront: Akamai Access Denied to automated clients including
+# headless Chromium. ISBN 9780262546881 Introduction to System Safety Engineering.
+# Confirmed via Open Library ISBN resolve and Task 5 primary-page year check
+# 2026-09-17. Remove when mitpress.mit.edu returns 2xx to lychee.
+https://mitpress\.mit\.edu/9780262546881/
+
+# ROSAP FAA STPA PDF: Playwright downloads a real %PDF- document (1,055,826 bytes)
+# and the landing page https://rosap.ntl.bts.gov/view/dot/78914 returns 200 with the
+# FAA evaluation title, 2026-09-17. Lychee/curl get Akamai 403. Remove when ROSAP
+# returns 2xx to automated fetchers.
+https://rosap\.ntl\.bts\.gov/view/dot/78914/dot_78914_DS1\.pdf
+
+# ISO catalog page for ISO 26262-1:2018: Playwright Chromium got HTTP 200 and title
+# "ISO 26262-1:2018 - Road vehicles — Functional safety — Part 1: Vocabulary" on
+# 2026-09-17. Lychee hits Cloudflare 403. Remove when iso.org returns 2xx to lychee.
+https://www\.iso\.org/standard/68383\.html
