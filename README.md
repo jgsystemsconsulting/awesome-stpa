@@ -20,6 +20,10 @@ See [Editorial neutrality](CONTRIBUTING.md#7-editorial-neutrality).
 - [Learning & Workshops](#learning--workshops)
 - [Datasets & Examples](#datasets--examples)
 - [Related lists](#related-lists)
+- [Install](#install)
+- [Usage](#usage)
+- [Support](#support)
+- [Version](#version)
 
 ## Foundations & Handbooks
 
@@ -105,13 +109,6 @@ the hub repository goes public.
 - [awesome-sysml-v2](https://github.com/jgsystemsconsulting/awesome-sysml-v2) - Sibling family list for SysML v2: spec, tools, models `STAMP-general` `list` (2026).
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome) - The meta-list of high-quality awesome lists `STAMP-general` `list` (2026).
 
----
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, the maintainers have waived all copyright and related
-or neighboring rights to this work. Released under CC0 1.0 Universal; see [LICENSE](LICENSE).
-
 ## Install
 
 Nothing to install. This list is a curated index: browse it here on GitHub,
@@ -123,26 +120,12 @@ git clone https://github.com/jgsystemsconsulting/awesome-stpa.git
 
 ## Usage
 
-- Browse the sections under [Contents](#contents), or search the page with
-  your browser's find function.
-- Open any entry's link to reach the upstream resource; the list never
-  re-hosts content. PSAS handbook and paper links keep their query strings;
-  they are part of the address.
-- To suggest a resource, use the
-  [Suggest a resource](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml)
-  issue form.
-- To propose a correction, open a pull request (see
-  [CONTRIBUTING.md](CONTRIBUTING.md)), or use the
-  [bug report](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=bug_report.yml)
-  form for a dead, wrong, or mislabelled entry.
-
-## Licence
-
-Released under [CC0 1.0 Universal](LICENSE). Linked resources remain under
-their own licences.
-
-To request a commercial or academic licence, or if you are unsure which
-licence you need: https://labs.jgsystemsconsulting.com/licensing.html
+1. Open the Contents at the top and jump to a section.
+2. Follow entry links to the upstream resource; the list never re-hosts
+   content. PSAS handbook and paper links keep their query strings; they
+   are part of the address.
+3. To suggest a resource or report a defect, use the Support channels below
+   (or open a pull request that follows CONTRIBUTING.md).
 
 ## Support
 
@@ -152,6 +135,9 @@ licence you need: https://labs.jgsystemsconsulting.com/licensing.html
   [suggestion form](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml)
 - Security issues: [private security advisory](https://github.com/jgsystemsconsulting/awesome-stpa/security/advisories/new)
   (see [SECURITY.md](SECURITY.md)); non-sensitive fixes come as pull requests.
+- Licence: this list is [CC0 1.0 Universal](LICENSE). Linked resources keep
+  their own licences. Licence enquiries:
+  [labs licensing form](https://labs.jgsystemsconsulting.com/licensing.html).
 
 ## Version
 
