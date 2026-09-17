@@ -1,9 +1,11 @@
 # Changelog
 
-Maintenance sweeps and notable changes. The "Last full sweep" badge in the README
-tracks the most recent dated entry here.
+Maintenance sweeps and notable changes to this list. The format follows
+Keep a Changelog and versions follow Semantic Versioning.
 
-## 2026-09 - Initial release
+## [0.1.0] - 2026-09-17
+
+### Added
 
 - **Shipped v1**: seven sections, 43 entries (PSAS foundations, open-source tools
   first then commercial, standards context, agency and workshop cases, learning,
@@ -15,3 +17,6 @@ tracks the most recent dated entry here.
   rules ported verbatim (PSAS query strings called out as semantically required), STPA
   tag vocabulary in fixed axis order, known-rot appendix, editorial neutrality. Repo
   created private per FAMILY Private mode.
+- Release-standard pass (Release Repo Standard v1.14, RR-B Base): COPYRIGHT,
+  CITATION.cff, RELEASE-INFO.txt, SECURITY.md advisory route, release gate CI,
+  issue forms, Pages landing, and the distribution ledger.

@@ -1,0 +1,4 @@
+Product: Awesome STPA
+Version: 0.1.0
+Built: 2026-09-17T16:45:51Z
+Tag: v0.1.0

@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a dead, wrong, or mislabelled list entry, or a checker defect
+labels: [bug]
+body:
+  - type: input
+    id: entry-url
+    attributes:
+      label: Affected entry URL
+      description: The list entry this report is about (paste the URL from README)
+    validations:
+      required: true
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Problem type
+      options:
+        - Dead or moved link
+        - Wrong or misleading description
+        - Wrong tags or year
+        - Checker or CI defect
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: List version
+      description: From RELEASE-INFO.txt or the release notes
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What is wrong, and what should it say instead
+    validations:
+      required: true
+  - type: checkboxes
+    id: hygiene
+    attributes:
+      label: Hygiene
+      options:
+        - label: I confirm this report contains no tokens, keys, or credentials.
+          required: true
