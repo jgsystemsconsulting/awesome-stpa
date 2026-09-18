@@ -120,6 +120,10 @@ The maintainers run a **quarterly sweep** (add new resources, prune rot), logged
 `CHANGELOG.md` with the date, and update the *Last full sweep* badge at the top of the
 README each time. If more than **6 months** pass since the last sweep, the badge flips
 to "maintenance lapsed"; call it out in an issue.
+After a sweep, release bump, entry add or remove, or curated heading rename,
+update the matching chips and section-index anchors in docs/index.html;
+`scripts/check_release.py` fails when the landing drifts from README.md or
+RELEASE-INFO.txt.
 
 ## 10. Known-rot appendix (quarantine)
 
