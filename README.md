@@ -22,10 +22,6 @@ See [Editorial neutrality](CONTRIBUTING.md#7-editorial-neutrality).
 - [Learning & Workshops](#learning--workshops)
 - [Datasets & Examples](#datasets--examples)
 - [Related lists](#related-lists)
-- [Install](#install)
-- [Usage](#usage)
-- [Support](#support)
-- [Version](#version)
 
 ## Foundations & Handbooks
 
@@ -111,6 +107,11 @@ the hub repository goes public.
 - [awesome-sysml-v2](https://github.com/jgsystemsconsulting/awesome-sysml-v2) - Sibling family list for SysML v2: spec, tools, models `STAMP-general` `list` (2026).
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome) - The meta-list of high-quality awesome lists `STAMP-general` `list` (2026).
 
+## Contributing
+
+Contributions welcome: see [CONTRIBUTING.md](CONTRIBUTING.md) for the inclusion bar,
+entry format, and tag vocabulary.
+
 ## Install
 
 Nothing to install. This list is a curated index: browse it here on GitHub,
@@ -122,23 +123,23 @@ git clone https://github.com/jgsystemsconsulting/awesome-stpa.git
 
 ## Usage
 
-1. Open the Contents at the top and jump to a section.
-2. Follow entry links to the upstream resource; the list never re-hosts
-   content. PSAS handbook and paper links keep their query strings; they
-   are part of the address.
+1. Open the Contents at the top and jump to a section, or search the page with
+   your browser's find function.
+2. Open any entry's link to reach the upstream resource; the list never
+   re-hosts content. PSAS handbook and paper links keep their query
+   strings; they are part of the address.
 3. To suggest a resource or report a defect, use the Support channels below
    (or open a pull request that follows CONTRIBUTING.md).
 
 ## Support
 
-- Dead or wrong entry: [bug report form](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=bug_report.yml)
-- Suggest a resource (the list's improvement channel; its filename does not
-  match the release auditor's improvement-form glob, an accepted WARN):
+- Bug or dead link: [bug report form](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=bug_report.yml)
+- Suggest a resource (the list's improvement channel):
   [suggestion form](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml)
 - Security issues: [private security advisory](https://github.com/jgsystemsconsulting/awesome-stpa/security/advisories/new)
-  (see [SECURITY.md](SECURITY.md)); non-sensitive fixes come as pull requests.
+  (see [SECURITY.md](SECURITY.md))
 
 ## Version
 
-Current release: 0.1.0 (2026-09-17). See [CHANGELOG.md](CHANGELOG.md) and
+Current release: **0.1.0** (2026-09-17). See [CHANGELOG.md](CHANGELOG.md) and
 [RELEASE-INFO.txt](RELEASE-INFO.txt).
