@@ -171,7 +171,7 @@ pins).
 | name | org-catalogue-entry |
 | size | M |
 | deps | P1 |
-| status | ready |
+| status | done |
 | promoted_ids | [] |
 | corroboration | 2 (value, cohesion; absorbs merged duplicate P4) |
 | first_prompt | `/superpowers-process full org catalogue entry` |
@@ -216,7 +216,7 @@ External-repo work (website data plus regen) alongside the ledger update.
 | name | awesome-acceptability-assessment |
 | size | S |
 | deps | none |
-| status | ready |
+| status | done |
 | promoted_ids | [] |
 | corroboration | 2 (value, cohesion; absorbs merged duplicate P6) |
 | first_prompt | `/superpowers-process full awesome acceptability assessment` |

@@ -11,7 +11,7 @@ date so the question stays closed until its premises change. Revisit at
 every release: move statuses, re-date reasons whose premises changed, never
 drop a row silently.
 
-Last reviewed: 0.1.0 / 2026-09-17
+Last reviewed: 0.1.0 / 2026-09-18
 
 | Channel | Artifact | Status | Decision / reason | Date |
 |---|---|---|---|---|
@@ -19,8 +19,8 @@ Last reviewed: 0.1.0 / 2026-09-17
 | GitHub Releases | v0.1.0 | submitted | Published from the CHANGELOG entry with the licence-enquiry footer on the release commit. | 2026-09-17 |
 | GitHub Pages landing | docs/index.html | live | Served from main /docs; build status built. Homepage URL set after Checklist A proves anonymous 200 (or earlier if Pages already serves). | 2026-09-17 |
 | GitHub About, topics, homepage | repo settings | applied | Description set to the locked string; six topics unchanged. Homepage follows the Checklist A flip once anonymous Pages 200 is proven. | 2026-09-17 |
-| Org catalogue (labs.jgsystemsconsulting.com) | site entry | planned | Add a list entry alongside the other awesome-mbse spokes. | 2026-09-17 |
-| sindresorhus/awesome | list PR | deferred | Checklist C runs after the hub goes public; not before. | 2026-09-17 |
+| Org catalogue (labs.jgsystemsconsulting.com) | site entry | submitted | Entry added in jgsystemsconsulting-website data/products.yml + regenerated docs/index.html (branch feat/awesome-stpa-catalogue-entry, commit 6a9f095). Live after Labs site merge/deploy. | 2026-09-18 |
+| sindresorhus/awesome | list PR | deferred | Acceptability assessed 2026-09-18: go with prerequisites (hub public if Checklist C still requires it, clean lychee on README+landing after next sweep, re-read PR template at submit time). Assessment: docs/superpowers/specs/2026-09-18-awesome-acceptability-assessment.md. Do not open PR until prerequisites clear and an explicit go-now. | 2026-09-18 |
 | In-host agent and IDE marketplaces (Claude Code, Cursor, Codex, Gemini CLI) | n/a | deliberate N/A | A curated list is browsed on GitHub, not installed into an agent host, so no marketplace manifests apply (RR-B-29). | 2026-09-17 |
 | MCP directories (awesome-mcp-servers, Glama, Smithery, PulseMCP) | n/a | deliberate N/A | The list speaks no MCP; RR-M rows are out of profile (RR-B Base only). | 2026-09-17 |
 | Community safety and MBSE directories | link posts | deferred | Assess each directory's scope and licence bar before posting. | 2026-09-17 |
