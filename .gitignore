@@ -13,3 +13,6 @@ lychee/
 
 # Node (used only transiently for doctoc/awesome-lint via npx)
 node_modules/
+# Local SA / link-check artifacts
+docs/superpowers/sa-audit-*.json
+sa-audit-*.json

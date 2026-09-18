@@ -16,7 +16,7 @@ REQUIRED = [
     "README.md", "LICENSE", "COPYRIGHT", "NOTICE", "CHANGELOG.md",
     "SECURITY.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md",
     "RELEASE-INFO.txt", "CITATION.cff",
-    "docs/DISTRIBUTION.md", "docs/index.html",
+    "docs/DISTRIBUTION.md", "docs/index.html", "docs/MATURITY.md",
     "scripts/check_release.py",
 ]
 for f in REQUIRED:

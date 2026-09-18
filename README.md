@@ -1,5 +1,11 @@
 # Awesome STPA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+<p align="right">
+  <a href="https://jgsystemsconsulting.github.io/awesome-stpa/">
+    <img src="media/logo.svg" width="256" alt="list mark">
+  </a>
+</p>
+
 > A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources:
 > handbooks, tools, standards context, case studies, and datasets, for safety and
 > systems engineering practitioners.
@@ -135,9 +141,6 @@ git clone https://github.com/jgsystemsconsulting/awesome-stpa.git
   [suggestion form](https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml)
 - Security issues: [private security advisory](https://github.com/jgsystemsconsulting/awesome-stpa/security/advisories/new)
   (see [SECURITY.md](SECURITY.md)); non-sensitive fixes come as pull requests.
-- Licence: this list is [CC0 1.0 Universal](LICENSE). Linked resources keep
-  their own licences. Licence enquiries:
-  [labs licensing form](https://labs.jgsystemsconsulting.com/licensing.html).
 
 ## Version
 
