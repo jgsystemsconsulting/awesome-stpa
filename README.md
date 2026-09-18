@@ -1,10 +1,6 @@
 # Awesome STPA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-<p align="right">
-  <a href="https://jgsystemsconsulting.github.io/awesome-stpa/">
-    <img src="media/logo.svg" width="256" alt="list mark">
-  </a>
-</p>
+[<img src="media/logo.svg" align="right" width="100" alt="STPA">](https://jgsystemsconsulting.github.io/awesome-stpa/)
 
 > A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources:
 > handbooks, tools, standards context, case studies, and datasets, for safety and
