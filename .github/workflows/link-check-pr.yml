@@ -9,6 +9,7 @@ on:
   pull_request:
     paths:
       - "README.md"
+      - "docs/index.html"
       - ".lycheeignore"
       - ".github/workflows/link-check-pr.yml"
   push:
@@ -40,5 +41,6 @@ jobs:
             --accept 200..=299,429
             --no-progress
             README.md
+            docs/index.html
           fail: true
           token: ${{ secrets.GITHUB_TOKEN }}

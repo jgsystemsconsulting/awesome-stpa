@@ -86,7 +86,7 @@ section-index href fragments are gate inputs; display text may change freely.
 | name | pin-validate-setup-python |
 | size | S |
 | deps | none |
-| status | ready |
+| status | done |
 | promoted_ids | [] |
 | corroboration | 2 (risk, cohesion) |
 | first_prompt | `/superpowers-process full pin validate setup python` |
@@ -128,7 +128,7 @@ package list names this package, so validate.yml pins belong here, not in P2.
 | name | link-check-product-surface |
 | size | S |
 | deps | P1 |
-| status | ready |
+| status | done |
 | promoted_ids | [] |
 | corroboration | 3 (value, risk, cohesion) |
 | first_prompt | `/superpowers-process full landing link check coverage` |
