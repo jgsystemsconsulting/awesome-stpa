@@ -24,6 +24,10 @@ See [Editorial neutrality](CONTRIBUTING.md#7-editorial-neutrality).
 - [Learning & Workshops](#learning--workshops)
 - [Datasets & Examples](#datasets--examples)
 - [Related lists](#related-lists)
+- [Install](#install)
+- [Usage](#usage)
+- [Support](#support)
+- [Version](#version)
 
 ## Foundations & Handbooks
 
