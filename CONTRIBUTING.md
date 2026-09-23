@@ -1,6 +1,5 @@
 # Contributing
 
-
 **Lint is mandatory.** awesome-lint on README.md must pass on every push/PR to main. See [docs/MATURITY.md](docs/MATURITY.md).
 
 Thanks for helping keep this the best-curated STAMP/STPA index anywhere. Read this
