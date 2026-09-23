@@ -24,7 +24,7 @@ jobs:
           lycheeVersion: v0.24.2
           args: >-
             --include-fragments=anchor-only
-            --max-retries 3
+            --max-retries 3 --timeout 40
             --max-concurrency 4
             --accept 200..=299,429
             --no-progress
