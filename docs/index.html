@@ -1,494 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Built from the jgs-site-template shell: edit site.config.json, run tools/build.py. -->
+<!-- SPDX-License-Identifier: MIT -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Awesome STPA</title>
-  <meta name="description" content="Curated STAMP/STPA and hazard analysis resources for safety and systems engineering practitioners.">
-  <link rel="canonical" href="https://jgsystemsconsulting.github.io/awesome-stpa/">
-  <meta property="og:title" content="Awesome STPA">
-  <meta property="og:description" content="Curated STAMP/STPA and hazard analysis resources for safety and systems engineering practitioners.">
-  <meta property="og:url" content="https://jgsystemsconsulting.github.io/awesome-stpa/">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23157adb'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='17' font-weight='600' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-  <link rel="preload" href="fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/IBMPlexSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  <style>
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-Medium.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Mono";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Awesome STPA: curated STAMP/STPA and hazard-analysis resources</title>
+<meta name="description" content="A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, case studies, and datasets.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/awesome-stpa/">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css?v=20260925b">
 
-    :root {
-      --color-bg: oklch(0.985 0.006 255);
-      --color-surface-1: oklch(0.995 0.005 255);
-      --color-surface-2: oklch(0.998 0.004 255);
-      --color-surface-3: oklch(1.0 0 0);
-      --color-primary: oklch(0.19 0.015 260);
-      --color-accent: oklch(0.58 0.17 253);
-      --color-text: oklch(0.17 0.012 258);
-      --color-text-muted: oklch(0.50 0.012 258);
-      --color-border: oklch(0.915 0.008 255);
-      --color-focus-ring: var(--color-accent);
-      --color-success: oklch(0.45 0.10 150);
-      --color-danger: oklch(0.50 0.14 25);
-      --color-attention: oklch(0.55 0.12 85);
-
-      --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-
-      --text-meta: 0.8rem;   /* 12.8px */
-      --text-body: 1rem;     /* 16px */
-      --text-h3: 1.25rem;    /* 20px */
-      --text-h2: 1.5625rem;  /* 25px */
-      --text-h1: 1.9375rem;  /* 31px */
-
-      --space-1: 4px;
-      --space-2: 8px;
-      --space-3: 16px;
-      --space-4: 32px;
-      --space-5: 56px;
-      --space-section: 80px;
-
-      --radius-sm: 3px;
-      --radius-md: 5px;
-      --radius-lg: 7px;
-
-      --shell-max: 1120px;
-      --prose-max: 70ch;
-
-      color-scheme: light;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-sans);
-      font-size: var(--text-body);
-      font-weight: 400;
-      line-height: 1.55;
-      color: var(--color-text);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--color-accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.15em;
-      transition: color 160ms ease-out;
-    }
-
-    a:hover {
-      color: var(--color-primary);
-    }
-
-    a:focus-visible,
-    .primary:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--color-focus-ring);
-      outline-offset: 2px;
-    }
-
-    .shell {
-      width: min(100% - 2 * var(--space-3), var(--shell-max));
-      margin-inline: auto;
-    }
-
-    .prose {
-      max-width: var(--prose-max);
-    }
-
-    /* Nav */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--color-bg);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .site-nav .shell {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--space-2) var(--space-3);
-      padding-block: var(--space-2);
-      min-height: 48px;
-    }
-
-    .site-nav a {
-      font-size: var(--text-meta);
-      font-weight: 500;
-      color: var(--color-text-muted);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      padding: var(--space-1) var(--space-1);
-    }
-
-    .site-nav a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    .site-nav .nav-full {
-      margin-inline-start: auto;
-      color: var(--color-accent);
-    }
-
-    /* Main sections */
-    section {
-      padding-block: var(--space-section);
-    }
-
-    section + section {
-      border-top: 1px solid var(--color-border);
-    }
-
-    h1, h2, h3 {
-      color: var(--color-primary);
-      line-height: 1.25;
-      margin: 0 0 var(--space-3);
-    }
-
-    h1 {
-      font-size: var(--text-h1);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: var(--text-h2);
-      font-weight: 600;
-      letter-spacing: -0.015em;
-    }
-
-    h3 {
-      font-size: var(--text-h3);
-      font-weight: 500;
-    }
-
-    p {
-      margin: 0 0 var(--space-3);
-      color: var(--color-text);
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .muted {
-      color: var(--color-text-muted);
-    }
-
-    /* Hero */
-    #hero {
-      padding-block: var(--space-5) var(--space-section);
-    }
-
-    #hero .claim {
-      font-size: var(--text-body);
-      max-width: var(--prose-max);
-      margin-bottom: var(--space-3);
-    }
-
-    #hero .support {
-      color: var(--color-text-muted);
-      max-width: var(--prose-max);
-      margin-bottom: var(--space-4);
-    }
-
-    .primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 var(--space-4);
-      font-family: var(--font-sans);
-      font-size: var(--text-body);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--color-surface-3);
-      background: var(--color-accent);
-      border: 1px solid var(--color-accent);
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      box-shadow: 0 1px 2px color-mix(in oklch, var(--color-primary) 12%, transparent);
-      transition: background-color 160ms ease-out, border-color 160ms ease-out, color 160ms ease-out;
-    }
-
-    .primary:hover {
-      color: var(--color-surface-3);
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      text-decoration: none;
-    }
-
-    /* Evidence */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin: 0 0 var(--space-4);
-      padding: 0;
-      list-style: none;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: baseline;
-      gap: var(--space-2);
-      padding: var(--space-1) var(--space-2);
-      font-family: var(--font-mono);
-      font-size: var(--text-meta);
-      font-variant-numeric: tabular-nums;
-      color: var(--color-text-muted);
-      background: var(--color-surface-1);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-    }
-
-    .chip dt {
-      font-weight: 400;
-      margin: 0;
-    }
-
-    .chip dd {
-      margin: 0;
-      color: var(--color-text);
-      font-weight: 400;
-    }
-
-    .family {
-      max-width: var(--prose-max);
-      color: var(--color-text-muted);
-      font-size: var(--text-body);
-    }
-
-    /* Sections index */
-    .section-index {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      border-top: 1px solid var(--color-border);
-    }
-
-    .section-index li {
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .section-index a {
-      display: block;
-      padding: var(--space-3) 0;
-      font-weight: 500;
-      color: var(--color-text);
-      text-decoration: none;
-    }
-
-    .section-index a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    @media (min-width: 1024px) {
-      .section-index {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: var(--space-4);
-      }
-
-      .section-index li:nth-child(odd) {
-        padding-inline-end: var(--space-3);
-      }
-
-      .section-index li:nth-child(even) {
-        padding-inline-start: var(--space-3);
-        border-inline-start: 1px solid var(--color-border);
-      }
-    }
-
-    /* Contribute */
-    .link-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      max-width: var(--prose-max);
-    }
-
-    .link-list li {
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .link-list li:first-child {
-      border-top: 1px solid var(--color-border);
-    }
-
-    .link-list a {
-      display: block;
-      padding: var(--space-3) 0;
-      font-weight: 500;
-      color: var(--color-text);
-      text-decoration: none;
-    }
-
-    .link-list a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    .site-footer {
-      border-top: 1px solid var(--color-border);
-      padding-block: var(--space-4);
-      font-size: var(--text-meta);
-      color: var(--color-text-muted);
-    }
-
-    .site-footer p {
-      margin: 0;
-      color: var(--color-text-muted);
-    }
-
-    .site-footer a {
-      font-weight: 500;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
-  </style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/awesome-stpa/">
+<meta property="og:title" content="Awesome STPA">
+<meta property="og:description" content="A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, case studies, and datasets.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Awesome STPA">
+<meta name="twitter:description" content="A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, case studies, and datasets.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Awesome STPA","applicationCategory":"DeveloperApplication","operatingSystem":"Any","softwareVersion":"0.1.0","license":"https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/LICENSE","url":"https://jgsystemsconsulting.github.io/awesome-stpa/","codeRepository":"https://github.com/jgsystemsconsulting/awesome-stpa","author":{"@type":"Organization","name":"JG Systems Consulting Ltd"}}
+</script>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Page">
-    <div class="shell">
-      <a href="#hero">Top</a>
-      <a href="#status">Status</a>
-      <a href="#sections">Sections</a>
-      <a href="#curation">Curation</a>
-      <a href="#contribute">Contribute</a>
-      <a class="nav-full" href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md">Open full list</a>
-    </div>
-  </nav>
 
-  <main>
-    <section id="hero">
-      <div class="shell">
-        <h1>Awesome STPA</h1>
-        <p class="claim">Curated STAMP/STPA and hazard analysis resources for safety and systems engineering practitioners.</p>
-        <p class="support">Open the full list on GitHub for searchable Contents, then jump to the section that matches your work.</p>
-        <a class="primary" href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md">Open full list</a>
-      </div>
-    </section>
+<header class="masthead"><div class="wrap">
+  <span>CLASSIFICATION: <b>PUBLIC</b></span>
+  <span>LICENCE: <b>CC0-1.0</b></span>
+  <span>DOC-ID: <b>JGS-AWE-STPA</b></span>
+  <span>REV <b>0.1.0</b></span>
+</div></header>
 
-    <section id="status" aria-labelledby="status-heading">
-      <div class="shell">
-        <h2 id="status-heading">Status</h2>
-        <dl class="chips">
-          <div class="chip">
-            <dt>version</dt>
-            <dd>0.1.0</dd>
-          </div>
-          <div class="chip">
-            <dt>sweep</dt>
-            <dd>2026-09</dd>
-          </div>
-          <div class="chip">
-            <dt>entries</dt>
-            <dd>42</dd>
-          </div>
-        </dl>
-        <p class="family">Part of the awesome-mbse list family.</p>
-      </div>
-    </section>
+<nav class="site" aria-label="Site"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="JG Systems Consulting home"><img src="images/jgs-emblem-dark.png" alt="" width="28" height="28"></a>
+    <a href="#foundations-handbooks">Foundations</a>
+    <a href="#tools">Tools</a>
+    <a href="#standards-guidance">Standards</a>
+    <a href="#case-studies">Cases</a>
+    <a href="#learning-workshops">Learning</a>
+    <a href="#datasets-examples">Datasets</a>
+    <a href="#related-lists">Related</a>
+    <a href="#contribute">Contribute</a>
+</nav>
 
-    <section id="sections" aria-labelledby="sections-heading">
-      <div class="shell">
-        <h2 id="sections-heading">Sections</h2>
-        <p class="muted prose">Seven README sections. Open a section on GitHub.</p>
-        <ul class="section-index">
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#foundations--handbooks">Foundations and handbooks</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#tools">Tools</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#standards--guidance">Standards and guidance</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#case-studies--agency-reports">Case studies and agency reports</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#learning--workshops">Learning and workshops</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#datasets--examples">Datasets and examples</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md#related-lists">Related lists</a></li>
-        </ul>
-      </div>
-    </section>
+<main>
+<div class="hero"><div class="wrap">
+  <h1>Awesome STPA</h1>
+  <div class="hero-grid">
+  <div class="hero-copy">
+    <p>A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, case studies, and datasets, for safety and systems engineering practitioners.</p>
+    <p class="sub">Open the full list on GitHub for searchable Contents, then jump to the section that matches your work.</p>
+    <div class="cta"><a class="btn btn-primary" href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/README.md">Open full list <span aria-hidden="true">&rarr;</span></a>
+    <a class="btn btn-ghost" href="https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml">Suggest a resource <span aria-hidden="true">&rarr;</span></a></div>
+  </div>
+  </div>
+</div></div>
 
-    <section id="curation" aria-labelledby="curation-heading">
-      <div class="shell">
-        <h2 id="curation-heading">Curation</h2>
-        <p class="prose">Public-domain (CC0) curated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, agency case studies, learning, and datasets. Nothing to install. Every entry points at the upstream source and carries topic tags and a year. The list does not claim any standard mandates STPA.</p>
-      </div>
-    </section>
+<section id="about"><div class="wrap">
+  <div class="shead"><span class="label">&sect;01 &middot; About</span><h2>Curated and dated</h2></div>
+  <p class="lead">A curated, dated index of STAMP/STPA, CAST, and hazard-analysis resources: handbooks, tools, standards context, case studies, and datasets, for safety and systems engineering practitioners.</p>
+<div class="meta-row">
+  <span>version <b>0.1.0</b></span>
+  <span>sweep <b>2026-09</b></span>
+  <span>entries <b>42</b></span>
+</div>
+<p class="lead" style="margin-top:1.25rem">Part of the <a href="https://github.com/jgsystemsconsulting/awesome-mbse/blob/main/FAMILY.md">awesome-mbse list family</a>. People and organizations behind these resources: <a href="https://github.com/jgsystemsconsulting/awesome-mbse-community">awesome-mbse-community</a>. Maintained by <a href="https://github.com/jgsystemsconsulting">JG Systems Consulting Ltd.</a> See <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/CONTRIBUTING.md#7-editorial-neutrality">Editorial neutrality</a>.</p>
+</div></section>
 
-    <section id="contribute" aria-labelledby="contribute-heading">
-      <div class="shell">
-        <h2 id="contribute-heading">Contribute</h2>
-        <p class="muted prose">Suggest a resource or report a dead link via the repository issue forms.</p>
+<section id="foundations-handbooks"><div class="wrap">
+  <div class="shead"><span class="label">&sect;02 &middot; Foundations &amp; Handbooks</span><h2>Foundations &amp; Handbooks</h2></div>
+  <p class="lead">Start here: the free STPA and CAST handbooks, Leveson's books, and the MIT PSAS indexes that track the STAMP ecosystem.</p>
+  <ul class="entry-list">
+<li><a href="https://psas.scripts.mit.edu/home/get_file.php?name=STPA_Handbook.pdf">STPA Handbook</a> - Free process handbook for System-Theoretic Process Analysis by Leveson and Thomas<span class="tags"><code>STPA</code> <code>handbook</code> (2018)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/get_file4.php?name=CAST_Handbook.pdf">CAST Handbook</a> - Free handbook for CAST, the STAMP-based accident analysis method<span class="tags"><code>CAST</code> <code>handbook</code> (2019)</span></li>
+<li><a href="https://direct.mit.edu/books/oa-monograph/2908/Engineering-a-Safer-WorldSystems-Thinking-Applied">Engineering a Safer World</a> - Leveson's open-access foundations of STAMP systems thinking<span class="tags"><code>STAMP-general</code> <code>book</code> (2011)</span></li>
+<li><a href="https://mitpress.mit.edu/9780262546881/">Introduction to System Safety Engineering</a> - Leveson's textbook on system safety engineering and management<span class="tags"><code>STAMP-general</code> <code>book</code> (2023)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/">MIT PSAS home</a> - MIT host for STAMP handbooks, the tools catalog, workshops, and publications<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/books%2Dand-handbooks/">Books and handbooks index</a> - PSAS index of STAMP books and handbooks, free and commercial<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/%6Daterials/">Materials index</a> - PSAS index of STAMP/STPA learning materials and references<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/%70ublications/">Publications search</a> - PSAS publications index covering STAMP research literature<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="tools"><div class="wrap">
+  <div class="shead"><span class="label">&sect;03 &middot; Tools</span><h2>Tools</h2></div>
+  <p class="lead">Open source first, then commercial. The PSAS stamp-tools catalog is an awareness list, not an endorsement. Commercial entries clear the same bar as everything else: documentation with substance, not pure vendor marketing (see <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/CONTRIBUTING.md#7-editorial-neutrality">Editorial neutrality</a> in CONTRIBUTING).</p>
+  <ul class="entry-list">
+<li><a href="https://github.com/SE-Stuttgart/XSTAMPP">XSTAMPP</a> - Open-source Eclipse-based STAMP platform supporting STPA and CAST analyses<span class="tags"><code>STPA</code> <code>XSTAMPP</code> <code>tool</code> (2018)</span></li>
+<li><a href="https://github.com/Micro-STAMP/microstamp">MicroSTAMP</a> - Open-source toolchain for STPA of microservice architectures<span class="tags"><code>STPA</code> <code>MicroSTAMP</code> <code>tool</code> (2026)</span></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=kieler.pasta">PASTA for VS Code</a> - VS Code extension providing an STPA DSL and analysis tooling from the KIELER project<span class="tags"><code>STPA</code> <code>PASTA</code> <code>tool</code> (2026)</span></li>
+<li><a href="https://github.com/kieler/pasta">PASTA source</a> - Source repository for PASTA, the KIELER STPA modeling and analysis tool<span class="tags"><code>STPA</code> <code>PASTA</code> <code>tool</code> (2026)</span></li>
+<li><a href="https://github.com/labs4capella/stpa-capella">stpa-capella</a> - Capella add-on bringing STPA viewpoints and analyses into Eclipse Capella models<span class="tags"><code>STPA</code> <code>stpa-capella</code> <code>tool</code> (2026)</span></li>
+<li><a href="https://github.com/cairis-platform/cairis">CAIRIS</a> - Open-source platform for engineering secure and usable systems, with STPA support<span class="tags"><code>STPA-Sec</code> <code>CAIRIS</code> <code>tool</code> (2023)</span></li>
+<li><a href="https://cairis.readthedocs.io/en/latest/stpa.html">CAIRIS STPA documentation</a> - CAIRIS guide to building STPA models: losses, hazards, constraints, control structures<span class="tags"><code>STPA</code> <code>CAIRIS</code> <code>handbook</code> (2020)</span></li>
+<li><a href="https://github.com/SE-Stuttgart/STPA-Safety-based-Testing-Plugin">STPA Safety-based Testing Plugin</a> - Plugin deriving safety tests from STPA analysis results<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> (2017)</span></li>
+<li><a href="https://www.ipa.go.jp/en/digital/complex_systems/stamp_workbench.html">STAMP Workbench (IPA)</a> - Japan IPA workbench for applying STPA to complex-system safety analysis<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/stamp%2Dtools/">PSAS stamp-tools catalog</a> - Catalog of STAMP and STPA tools across the ecosystem, maintained by MIT PSAS<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+<li><a href="https://en.vwaycorp.com/traceit">TRACEIT</a> - Commercial STPA and requirements-management tooling from VWAY<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> <code>paid</code> (2026)</span></li>
+<li><a href="https://en.vwaycorp.com/visualpro">VisualPro SA</a> - Commercial safety-analysis tool covering STPA and FHA workflows<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> <code>paid</code> (2026)</span></li>
+<li><a href="https://www.riskmanagementstudio.com/stpa-software-solution/">RM Studio STPA</a> - Commercial STPA module of the RM Studio risk-management platform<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> <code>paid</code> (2022)</span></li>
+<li><a href="https://stpamaster.com/">STPAmaster</a> - Commercial tool for building STPA control structures and analyzing scenarios<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> <code>paid</code> (2026)</span></li>
+<li><a href="https://depict.systems">Depict</a> - Commercial web tool for drawing and analyzing STPA control structures<span class="tags"><code>STPA</code> <code>other-tool</code> <code>tool</code> <code>paid</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="standards-guidance"><div class="wrap">
+  <div class="shead"><span class="label">&sect;04 &middot; Standards &amp; Guidance</span><h2>Standards &amp; Guidance</h2></div>
+  <p class="lead">Functional-safety assessment standards and guidance: industry contexts where STPA is used or discussed. This list does not claim any of them mandates STPA.</p>
+  <ul class="entry-list">
+<li><a href="https://www.iso.org/standard/68383.html">ISO 26262</a> - ISO catalog page for road vehicles functional safety; the text is paywalled, the catalog page is free<span class="tags"><code>STAMP-general</code> <code>standard</code> <code>ISO-26262</code> (2018)</span></li>
+<li><a href="https://www.sae.org/standards/content/arp4761a/">SAE ARP4761A</a> - SAE catalog page for the aerospace safety assessment guideline<span class="tags"><code>STAMP-general</code> <code>standard</code> <code>ARP4761A</code> (2023)</span></li>
+</ul>
+</div></section>
+
+<section id="case-studies"><div class="wrap">
+  <div class="shead"><span class="label">&sect;05 &middot; Case Studies &amp; Agency Reports</span><h2>Case Studies &amp; Agency Reports</h2></div>
+  <p class="lead">Applied STPA and CAST: regulator evaluations and workshop case studies.</p>
+  <ul class="entry-list">
+<li><a href="https://rosap.ntl.bts.gov/view/dot/78914/dot_78914_DS1.pdf">FAA STPA aviation-safety evaluation</a> - FAA evaluation applying STPA to aviation safety, hosted on ROSAP<span class="tags"><code>STPA</code> <code>case</code> (2025)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/wp%2Dcontent/uploads/2026/2026-03-24-1340__Adopting_STPA_Within_the_FAA__an_eVTOL_Test_C__PUB.pdf">Adopting STPA within the FAA: an eVTOL test case</a> - FAA eVTOL STPA test case presented at the MIT STAMP workshop<span class="tags"><code>STPA</code> <code>case</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/wp%2Dcontent/uploads/2024/2024-09-24-1200__Using_STPA_to_Design_Resilient_Systems_A_RealWorld_Guide_to_HumanCentred_Cognitive_Engineering__PUB.pdf">Network Rail STPA for resilient systems</a> - STPA applied to Network Rail resilient systems, MIT STAMP workshop presentation<span class="tags"><code>STPA</code> <code>case</code> (2024)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/wp%2Dcontent/uploads/2026/2026-03-24-1040__Applying_CAST_to_a_Healthcare_Adverse_Event_H__PUB.pdf">Healthcare CAST adverse-event case</a> - CAST analysis of a healthcare adverse event, MIT STAMP workshop presentation<span class="tags"><code>CAST</code> <code>case</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/mit%2Dstamp-workshop-presentations/">MIT STAMP workshop presentations archive</a> - Archive of yearly MIT STAMP workshop presentations<span class="tags"><code>STAMP-general</code> <code>workshop</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="learning-workshops"><div class="wrap">
+  <div class="shead"><span class="label">&sect;06 &middot; Learning &amp; Workshops</span><h2>Learning &amp; Workshops</h2></div>
+  <p class="lead">Courses, tutorials, and the yearly MIT STAMP workshop.</p>
+  <ul class="entry-list">
+<li><a href="https://psas.scripts.mit.edu/home/mit%2Dstamp-workshop-tutorials/">MIT STAMP workshop tutorials</a> - Tutorial program of the yearly MIT STAMP workshop<span class="tags"><code>STAMP-general</code> <code>workshop</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/stamp%2Dworkshop-information/">STAMP workshop information</a> - Current-year MIT STAMP workshop dates, venue, and registration<span class="tags"><code>STAMP-general</code> <code>workshop</code> (2026)</span></li>
+<li><a href="https://psas.scripts.mit.edu/home/online%2Deducation/">PSAS online education</a> - Free online STAMP/STPA education material from MIT PSAS<span class="tags"><code>STAMP-general</code> <code>course</code> (2026)</span></li>
+<li><a href="https://classes.stamp-institute.com/p/home">STAMP Institute training</a> - Commercial STPA/STAMP training catalog from the STAMP Institute<span class="tags"><code>STAMP-general</code> <code>course</code> <code>paid</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="datasets-examples"><div class="wrap">
+  <div class="shead"><span class="label">&sect;07 &middot; Datasets &amp; Examples</span><h2>Datasets &amp; Examples</h2></div>
+  <p class="lead">Downloadable STPA artifacts, worked examples, and adjacent modeling tools.</p>
+  <ul class="entry-list">
+<li><a href="https://github.com/adityajeppu/train-gate-STPA-control">train-gate STPA control example</a> - Worked STPA control-structure example on a train-gate system<span class="tags"><code>STPA</code> <code>dataset</code> (2020)</span></li>
+<li><a href="https://github.com/andreyokamura-unicamp/stpa-step1-dataset">stpa-step1-dataset</a> - Dataset of STPA step-one artifacts: losses, hazards, constraints<span class="tags"><code>STPA</code> <code>dataset</code> (2024)</span></li>
+<li><a href="https://github.com/triarchsecurity/stpa">triarchsecurity/stpa</a> - STPA applied to security threat modeling<span class="tags"><code>STPA-Sec</code> <code>dataset</code> (2026)</span></li>
+<li><a href="https://github.com/Dr-AneeshJoseph/anvil-safety-framework">anvil-safety-framework</a> - Safety-analysis framework package including STPA support<span class="tags"><code>STPA</code> <code>dataset</code> (2025)</span></li>
+<li><a href="https://github.com/LLM-Mutation/ease-2026-replication-package">ease-2026 replication package</a> - Replication package for an LLM-mutation STPA study (EASE 2026)<span class="tags"><code>STPA</code> <code>dataset</code> (2026)</span></li>
+<li><a href="https://github.com/gaphor/gaphor">Gaphor</a> - Lightweight open-source modeling tool with RAAML templates, STPA-adjacent safety modeling support<span class="tags"><code>STAMP-general</code> <code>other-tool</code> <code>tool</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="related-lists"><div class="wrap">
+  <div class="shead"><span class="label">&sect;08 &middot; Related lists</span><h2>Related lists</h2></div>
+  <p class="lead">Family lists and the awesome meta-index. The hub entry below is text-only until the hub repository goes public.</p>
+  <ul class="entry-list">
+<li><b>awesome-mbse</b> - Hub of this list family: methods, tools, and openable models across MBSE<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span> (Link returns when the hub goes public.)</li>
+<li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2">awesome-sysml-v2</a> - Sibling family list for SysML v2: spec, tools, models<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+<li><a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome</a> - The meta-list of high-quality awesome lists<span class="tags"><code>STAMP-general</code> <code>list</code> (2026)</span></li>
+</ul>
+</div></section>
+
+<section id="contribute"><div class="wrap">
+  <div class="shead"><span class="label">&sect;09 &middot; Contribute</span><h2>Contribute</h2></div>
+  <p class="lead">Contributions welcome: see CONTRIBUTING.md for the inclusion bar, entry format, and tag vocabulary.</p>
         <ul class="link-list">
           <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/CONTRIBUTING.md">How to contribute</a></li>
           <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=suggest-resource.yml">Suggest a resource</a></li>
           <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/issues/new?template=bug_report.yml">Report a bug or dead link</a></li>
+          <li><a href="https://github.com/jgsystemsconsulting/awesome-stpa/security/advisories/new">Security issues: private security advisory</a> (see <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/SECURITY.md">SECURITY.md</a>)</li>
         </ul>
-      </div>
-    </section>
-  </main>
+</div></section>
 
-  <footer class="site-footer">
-    <div class="shell">
-      <p>
-        Licence: <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/LICENSE">CC0-1.0</a>.
-        <a href="https://labs.jgsystemsconsulting.com/licensing.html">Licence enquiries</a>.
-        Maintained by JG Systems Consulting Ltd.
-      </p>
-    </div>
-  </footer>
+<section id="install-usage"><div class="wrap">
+  <div class="shead"><span class="label">&sect;10 &middot; Install and usage</span><h2>Nothing to install</h2></div>
+  <p class="lead">Nothing to install. This list is a curated index: browse it here on GitHub, or clone it (<code>git clone https://github.com/jgsystemsconsulting/awesome-stpa.git</code>).</p>
+<p class="lead" style="margin-top:1rem">Open the Contents at the top and jump to a section, or search the page with your browser's find function. Open any entry's link to reach the upstream resource; the list never re-hosts content. PSAS handbook and paper links keep their query strings; they are part of the address.</p>
+<p class="lead" style="margin-top:1rem">Current release: <b>0.1.0</b> (2026-09-17). See <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/CHANGELOG.md">CHANGELOG.md</a> and <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/RELEASE-INFO.txt">RELEASE-INFO.txt</a>. Copyright (c) 2026 JG Systems Consulting Ltd. See <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/LICENSE">LICENSE</a>; licensing enquiries: <a href="https://labs.jgsystemsconsulting.com/licensing.html">licensing page</a>.</p>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+  <div class="tblock">
+    <div class="tcell"><span class="tl">Product</span><b>awesome-stpa</b></div>
+    <div class="tcell"><span class="tl">Rev</span><b>0.1.0</b></div>
+    <div class="tcell"><span class="tl">Licence</span><b>CC0-1.0</b></div>
+    <div class="tcell"><span class="tl">Repository</span><b>jgsystemsconsulting/awesome-stpa</b></div>
+    <div class="tcell"><span class="tl">Engine</span><b>jgs-site-template</b></div>
+    <div class="tcell"><span class="tl">Owner</span><b>JG Systems Consulting Ltd</b></div>
+  </div>
+  <p class="fnote">Licence: <a href="https://github.com/jgsystemsconsulting/awesome-stpa/blob/main/LICENSE">CC0-1.0</a>. <a href="https://labs.jgsystemsconsulting.com/licensing.html">Licence enquiries</a>. Maintained by JG Systems Consulting Ltd.</p>
+</div></footer>
+
 </body>
 </html>
